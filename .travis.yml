@@ -1,0 +1,12 @@
+sudo: false
+script:
+  - [[ "$A" == "1" ]]
+deploy:
+  provider: script
+  script: echo deploy
+  on:
+    branch: master
+matrix:
+  include:
+    - env: A=1
+    - env: B=1
