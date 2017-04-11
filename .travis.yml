@@ -1,6 +1,7 @@
 sudo: false
+language: generic
 script:
-  - [[ "$A" == "1" ]]
+  - test "$A" = "1"
 deploy:
   provider: script
   script: echo deploy
